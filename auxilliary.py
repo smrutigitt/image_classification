@@ -47,7 +47,7 @@ def email_notification(arg_dic, failure_reason=None, user = False):
     if failure_reason is None:
         email_receiver = arg_dic['email_id']
         
-        msg['Subject'] = f"Your model {model_name} is trained successful. "
+        msg['Subject'] = f"Your model {model_name} is trained successfully. "
         
         body = f"""<p>Dear {email_receiver.split("@")[0].capitalize()},</p>
 
