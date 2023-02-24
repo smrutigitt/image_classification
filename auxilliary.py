@@ -73,10 +73,6 @@ def email_notification(arg_dic, failure_reason=None, user = False):
     <p>Model training failed for the account: {arg_dic['account_id']}, project_id: {arg_dic['project_id']}.</p>
     <p>Faliure reason: {failure_reason}.</p>
 
-    <p>For more deails, refer the console log of last build</p>
-
-    <p><a href="http://3.229.179.40:8080/job/live-training-server-GPU/{build_number}/consoleText/">Console log for last build</a></p>
-
 
     Cheers!<br>
     Team Saaragh
@@ -131,3 +127,4 @@ def update_status(status: str, account_id: str, project_id: str, model_name:str)
     headers = {'Content-Type': 'application/json'}
     response = requests.post(url=api_url,headers=headers, data=payload)
     return response.status_code
+
